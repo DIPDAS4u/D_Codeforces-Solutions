@@ -1,0 +1,15 @@
+    #include <stdio.h>
+     
+    int main(){
+        int k, n, w, b = 0;
+        scanf("%d %d %d", &k, &n, &w);
+        int K=k;
+        for(int i =2; i <= w; i++){
+            k = k + i*K;
+        }
+        if(k > n){
+            b = k-n;
+        }
+        printf("%d", b);
+        return 0;
+    }
