@@ -1,2 +1,2 @@
 # D_Codeforces-Solutions
-Solutions of some competitive programming from Codeforces by C programming language
+Solutions to various competitive programming problems from Codeforces using the C programming language
