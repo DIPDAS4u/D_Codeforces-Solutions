@@ -1,0 +1,20 @@
+    #include <stdio.h>
+     
+    int main(){
+        int n;
+        int i, flag = 0;
+        scanf("%d", &n);
+        while(n != 0){
+            scanf("%d", &i);
+            if(i == 1){
+                flag = 1;
+            }
+            n--;
+        }
+        if(flag == 1){
+            printf("HARD");
+        }else{
+            printf("EASY");
+        }
+        return 0;
+    }
