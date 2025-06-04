@@ -1,0 +1,15 @@
+    #include <stdio.h>
+     
+    int main(){
+        int n, p, q, room = 0;
+        scanf("%d", &n);
+        while(n != 0){
+            scanf("%d %d", &p, &q);
+            if((q-p)>= 2){
+                room++;
+            }
+            n--;
+        }
+        printf("%d", room);
+        return 0;
+    }
