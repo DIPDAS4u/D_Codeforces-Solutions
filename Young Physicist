@@ -1,0 +1,20 @@
+    #include <stdio.h>
+     
+    int main(){
+        int n;
+        scanf("%d", &n);
+        int sx = 0, sy = 0, sz = 0;
+        while(n--){
+            int x,y,z;
+            scanf("%d %d %d", &x, &y, &z);
+            sx += x;
+            sy += y;
+            sz += z;
+        }
+        if(sx == 0 && sy == 0 && sz == 0){
+            printf("YES");
+        }else{
+            printf("NO");
+        }
+        return 0;
+    }
