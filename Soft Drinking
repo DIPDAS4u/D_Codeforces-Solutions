@@ -1,0 +1,20 @@
+            #include <stdio.h>
+     
+            int main(){
+                int n, k, l, c, d, p, nl, np;
+                scanf("%d %d %d %d %d %d %d %d", &n, &k, &l, &c, &d, &p, &nl, &np);
+                int total = k*l;
+                int drink = total/nl;
+                int slices = c*d;
+                int salt = p/np;
+                int toast= 0;
+                if(drink <= slices && drink <= salt){
+                    toast = drink/n;
+                }else if(slices <= drink && slices <= salt){
+                    toast = slices/n;
+                }else if(salt <= drink && salt <= slices){
+                    toast = salt/n;
+                }
+                printf("%d", toast);
+            return 0;
+            }
