@@ -1,0 +1,18 @@
+            #include <stdio.h>
+     
+            int main(){
+                int n, k;
+                scanf("%d %d", &n, &k);
+                int time = (24*60)-(20*60);
+                int t = time - k;
+                int takes = 0, count = 0;
+                for(int i =1; i<= n; i++){
+                        takes += (i*5);
+                        t -= (i*5);
+                    if(t >= 0){
+                        count++;
+                    }
+                }
+                printf("%d", count);
+            return 0;
+            }
