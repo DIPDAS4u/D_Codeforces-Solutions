@@ -1,0 +1,28 @@
+        #include <stdio.h>
+     
+        int main(){
+            int n, m;
+            scanf("%d %d", &n , &m);
+            int piece[m], temp = 0;
+            for(int i =0; i < m; i++){
+                scanf("%d", &piece[i]);
+            }
+            for(int i = 0; i < m; i++){
+                for(int j = i+1; j < m; j++){
+                    if(piece[i] > piece[j]){
+                        temp = piece[i];
+                        piece[i] = piece[j];
+                        piece[j] = temp;
+                    }
+                }
+            }
+            int min = 1001;
+            for(int i =0; i <= m-n; i++){
+                int d = piece[i+n-1] - piece[i];
+                if(min > d){
+                    min = d;
+                }
+            }
+            printf("%d", min);
+        return 0;
+        }
