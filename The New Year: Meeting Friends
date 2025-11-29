@@ -1,0 +1,40 @@
+        #include <stdio.h>
+        #include <stdlib.h>
+     
+        int main(){
+            int x1, x2, x3;
+            scanf("%d %d %d", &x1, &x2, &x3);
+            int point;
+            if(x1 < x2 && x1 > x3){
+                point = x1;
+                x2 = abs(point - x2);
+                x3 = abs(point - x3);
+                printf("%d", x2+x3);
+            }else if(x1 > x2 && x1 < x3){
+                point = x1;
+                x2 = abs(point - x2);
+                x3 = abs(point - x3);
+                printf("%d", x2+x3);
+            }else if(x2 > x1 && x2 < x3){
+                point = x2;
+                x1 = abs(point - x1);
+                x3 = abs(point - x3);
+                printf("%d", x1+x3);
+            }else if(x2 < x1 && x2 > x3){
+                point = x2;
+                x1 = abs(point - x1);
+                x3 = abs(point - x3);
+                printf("%d", x1+x3);
+            }else if(x3 > x1 && x3 < x2){
+                point = x3;
+                x1 = abs(point - x1);
+                x2 = abs(point - x2);
+                printf("%d", x1+x2);
+            }else if(x3 < x1 && x3 > x2){
+                point = x3;
+                x1 = abs(point - x1);
+                x2 = abs(point - x2);
+                printf("%d", x1+x2);
+            }
+        return 0;
+        }
