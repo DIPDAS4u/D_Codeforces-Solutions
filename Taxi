@@ -1,0 +1,48 @@
+           #include <stdio.h>
+     
+            int main(){
+                int n;
+                scanf("%d", &n);
+                int s, total = 0;
+                int g1 =0, g2 =0, g3 =0, g4 =0;
+                for(int i =0; i< n; i++){
+                    scanf("%d", &s);
+                    if(s == 1){
+                        g1++;
+                    }else if(s == 2){
+                        g2++;
+                    }else if(s == 3){
+                        g3++;
+                    }else if(s == 4){
+                        g4++;
+                    }
+                }
+                int taxi = g4;
+     
+                int T;
+                if(g3<g1){
+                    T = g3;
+                    taxi += T;
+                    g1 -= T;
+                }else{
+                    taxi += g3;
+                    g1 = 0;
+                }
+     
+                taxi += g2/2;
+                if(g2%2 != 0){
+                    taxi++;
+                    if(g1 >= 2){
+                        g1 -= 2;
+                    }else{
+                        g1 = 0;
+                    }
+                }
+     
+                if(g1 > 0){
+                    taxi += (g1+3)/4;
+                }
+     
+                printf("%d\n", taxi);
+            return 0;
+            }
