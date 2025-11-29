@@ -1,0 +1,25 @@
+        #include <stdio.h>
+        #include <ctype.h>
+     
+        int main(){
+            char word[101];
+            scanf("%s", word);
+            int upper = 0;
+            for(int i =1; word[i] != '\0'; i++){
+                if( word[i] >= 'a' && word[i] <= 'z'){
+                    upper = 1;
+                    break;
+                }
+            }
+            if(upper == 0){
+                for(int i =0; word[i] != '\0'; i++){
+                    if( word[i] >= 'a' && word[i] <= 'z'){
+                         word[i] = toupper(word[i]);
+                    }else{
+                        word[i] = tolower(word[i]);
+                    }
+                }
+            }
+            printf("%s", word);
+        return 0;
+        }
