@@ -1,0 +1,26 @@
+        #include <stdio.h>
+     
+        int main(){
+            char guest[101], res[101], letters[101];
+            int count[26] = {0};
+            scanf("%s %s %s", guest, res, letters);
+     
+            for(int i =0; guest[i] != '\0'; i++){
+               count[guest[i] - 'A']++;
+            }
+            for(int i =0; res[i] != '\0'; i++){
+               count[res[i] - 'A']++;
+            }
+            for(int i =0; letters[i] != '\0'; i++){
+               count[letters[i] - 'A']--;
+            }
+     
+            for(int i =0; i < 26; i++){
+               if(count[i] != 0){
+                printf("NO");
+                return 0;
+               }
+            }
+            printf("YES");
+        return 0;
+        }
